@@ -1,0 +1,16 @@
+<h1>Home Page...</h1>
+
+{% load static %}
+
+<img src="{% static 'portfolio/AbdullahFiraas.jpg' %}">
+
+{% for p in projects %}
+
+<h2>{{p.title}}</h2>
+{{p.description}}
+<br>
+<img src="{{p.image.url}}">
+<br>
+    {{p.url}}
+
+{% endfor %}
