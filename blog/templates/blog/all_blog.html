@@ -1,0 +1,14 @@
+<h1>Blogs Page...</h1>
+
+
+{% for b in blogs %}
+
+<a href="{% url 'blog:view_blog' b.id %}"><h1>{{b.title}}</h1></a>
+    {{b.upload_date}}
+    <br>
+    {{b.description}}
+{% if b.image %}
+    <img src="{{b.image.url}}">
+{% endif %}
+
+{% endfor %}
